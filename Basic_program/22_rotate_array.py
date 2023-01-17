@@ -1,10 +1,12 @@
 def rotateArray(nums,k):
-    temp = nums.copy()
     n = len(nums)
+    temp = nums[:]
+
     for i in range(0,n):
         ele = (i+k) % n
         nums[ele] = temp[i]
 
+    return nums
 
-    print(nums)
-rotateArray([1,2,3,4,5,6,7],3)
+ans =  rotateArray([1,2,3,4,5,6],3)
+print(ans)
